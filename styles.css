@@ -1,4 +1,3 @@
-
 body {
     font-family: 'Lato', sans-serif;
     margin: 0;
@@ -165,6 +164,8 @@ section img {
 
 .alianzas-grid img {
     max-width: 100%;
+    height: 100px;
+    object-fit: contain;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
@@ -172,50 +173,6 @@ section img {
 
 .alianzas-grid img:hover {
     transform: scale(1.05);
-}
-
-/* Sección Servicios */
-#servicios {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-#servicios ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-#servicios ul li {
-    background: #111;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-#servicios ul li:hover {
-    transform: scale(1.05);
-}
-
-#servicios ul li img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-#servicios ul li p {
-    margin-top: 10px;
-    font-size: 1.1rem;
-    color: #fff;
-    font-weight: bold;
 }
 
 /* Footer */
@@ -262,7 +219,7 @@ footer {
     }
 
     .logo-container img {
-        max-width: 70%; /* Ajuste del tamaño del logo en pantallas pequeñas */
+        max-width: 70%;
     }
 
     .navbar ul {
@@ -272,10 +229,50 @@ footer {
     }
 
     section img {
-        max-width: 100%; /* Ajuste del tamaño de imágenes en pantallas pequeñas */
+        max-width: 100%;
     }
 
     .alianzas-grid {
-        grid-template-columns: repeat(2, 1fr); /* Ajuste del grid para pantallas pequeñas */
+        grid-template-columns: repeat(2, 1fr);
     }
+}
+
+#servicios {
+    display: flex; /* Alineación vertical y horizontal con flexbox */
+    flex-direction: column; /* Elementos organizados verticalmente */
+    align-items: center; /* Centrado horizontal */
+    gap: 20px; /* Espacio entre título y grilla */
+    padding: 40px 20px;
+    text-align: center;
+    background-color: black; /* Fondo opcional */
+    border-radius: 10px; /* Opcional */
+}
+
+#servicios h2 {
+    font-size: 2rem; /* Ajustar tamaño del título */
+    color: #fff;
+    margin: 0; /* Quitar márgenes */
+    text-align: center; /* Asegura el texto centrado */
+}
+
+/* Ajustes en Servicios */
+#servicios ul {
+    list-style: none; /* Eliminar puntos de viñetas */
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px; /* Limitar ancho de la cuadrícula */
+}
+
+/* Ajustes en Quiénes Somos */
+#nosotros img {
+    max-width: 80%; /* Coincidir tamaño con Bienvenido a Ciberlabs */
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Uniformidad visual */
 }
