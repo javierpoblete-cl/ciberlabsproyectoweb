@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Ciberlabs</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Lato', sans-serif;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .background-blur {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/backheader.png') no-repeat center center/cover;
+            filter: blur(12px);
+            z-index: -1;
+        }
+
+        .content-container {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+        }
+
+        .blog-header {
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        .blog-header h1 {
+            font-family: 'Roboto Slab', serif; /* Fuente consistente */
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            width: 360px; /* Tamaño adecuado */
+            height: auto;
+            z-index: 10; /* Asegurarse de que esté por encima del contenido */
+        }
+
+        .back-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: #1B98E0;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s ease;
+            max-width: 200px;
+        }
+
+        .back-button:hover {
+            background: #0A74DA;
+        }
+
+        .articles-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .article-frame {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .article-frame:hover {
+            transform: scale(1.05);
+        }
+
+        .article-frame h2 {
+            font-size: 1.5rem;
+            color: #1B98E0;
+            margin-bottom: 10px;
+        }
+
+        .article-frame p {
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        footer {
+            text-align: center;
+            background: #111;
+            color: #e0e0e0;
+            padding: 20px;
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-blur"></div>
+    <div class="content-container">
+        <header class="blog-header">
+            <img src="images/logo.png" alt="Logo de Ciberlabs" class="logo">
+            <h1>Blog de Ciberseguridad</h1>
+            <p>Descubre las últimas novedades y consejos en ciberseguridad.</p>
+            <a href="index.html" class="back-button">Volver a Inicio</a>
+        </header>
+        <main>
+            <section class="articles-container">
+                <div class="article-frame">
+                    <h2>Artículo 1: Protege tus datos</h2>
+                    <p>Consejos prácticos para mantener tu información segura en línea.</p>
+                </div>
+                <div class="article-frame">
+                    <h2>Artículo 2: Ataques recientes</h2>
+                    <p>Un análisis detallado de las últimas amenazas cibernéticas.</p>
+                </div>
+                <div class="article-frame">
+                    <h2>Artículo 3: Innovaciones en ciberseguridad</h2>
+                    <p>Exploramos las tecnologías emergentes para combatir ataques.</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Ciberlabs. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>
