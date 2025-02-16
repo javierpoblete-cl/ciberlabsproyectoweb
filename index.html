@@ -26,10 +26,50 @@
         .logo-container {
             text-align: center;
         }
+        html {
+            scroll-behavior: smooth;
+            scroll-snap-type: y mandatory;
+        }
+        body {
+            scroll-snap-type: y mandatory;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #0053a6;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .back-to-top:hover {
+            background: #1B98E0;
+        }
+        .contact-box {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            color: #fff;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .contact-box a {
+            color: #1B98E0;
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <header class="header">
+       
         <div class="logo-container">
             <img src="images/logo.png" alt="Logo de Ciberlabs">
             <p class="slogan">Protegiendo tu empresa con soluciones personalizadas</p>
@@ -59,9 +99,11 @@
     </div>
     <div class="hero-content">
         <h1>El nuevo estándar en análisis de datos</h1>
-        <p>Usa los datos para una visión de 360 grados de tu negocio.
-            somos tu solucion en ciberseguridad y capacitacion para enfrentar
-            los desafíos actuales</p>
+        <ul style="list-style-type: none; padding-left: 0; text-align: left;">
+            <li>- Nuestras alianzas aseguran un trabajo seguro y confiable.</li>
+            <li>- Estamos siempre atentos a posibles amenazas en tu organización.</li>
+            <li>- Nuestro robusto sistema de detección de fallas de seguridad te brinda la tranquilidad de trabajar sin riesgos.</li>
+        </ul>
     </div>
     <!-- Grid de Alianzas -->
     <div class="alianzas-grid">
@@ -130,5 +172,6 @@
     <footer>
         <p>&copy; 2024 Ciberlabs. Todos los derechos reservados.</p>
     </footer>
+    <a href="#top" class="back-to-top">↑</a>
 </body>
 </html>
