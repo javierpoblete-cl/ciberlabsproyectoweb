@@ -48,7 +48,7 @@ html {
 .logo-container .cta-button {
     position: relative;
     margin: 20px auto;
-    background: #0053a6;
+    background: #2dc881;
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
@@ -81,7 +81,7 @@ html {
 }
 
 .navbar ul li a:hover {
-    color: #1B98E0;
+    color: #2dc881;
 }
 
 /* Secciones */
@@ -188,7 +188,7 @@ footer {
     text-align: center;
     padding: 20px;
     font-size: 0.9rem;
-    border-top: 4px solid #1B98E0;
+    border-top: 4px solid #2dc881;
 }
 
 /* Animaciones */
@@ -240,34 +240,55 @@ footer {
     }
 }
 
+/* Sección de Servicios */
 #servicios {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
-    background-color: black;
-    border-radius: 10px;
+    background-color: #000;
+    color: #fff;
 }
 
 #servicios h2 {
-    font-size: 2rem;
-    color: #fff;
-    margin: 0;
-    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
-/* Ajustes en Servicios */
-#servicios ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+#servicios .servicios-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
-    width: 100%;
-    max-width: 1200px;
+    padding: 20px;
+}
+
+.servicio-card {
+    background: url('images/backcard.png') no-repeat center center/cover;
+    border: 2px solid #2dc881;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 300px;
+    margin: 10px;
+}
+
+.servicio-card:hover {
+    transform: scale(1.05);
+}
+
+.servicio-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.servicio-card p {
+    font-size: 1rem;
+    color: #fff; /* Change text color to white */
 }
 
 /* Ajustes en Quiénes Somos */
@@ -378,19 +399,20 @@ footer {
 .cta-button {
     position: relative;
     display: inline-block;
-    background: #ff0303;
-    color: #fff;
+    background: #ff6666; /* Soft red background */
+    color: #000; /* Black text */
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.5); /* Beveled border for 3D effect */
     text-decoration: none;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
     margin-top: 20px;
 }
 
 .cta-button:hover {
-    background: #e04c1b;
+    background: #ff4d4d; /* Slightly darker red on hover */
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.5); /* Inset shadow for pressed effect */
 }
 
 /* Sección de Contacto */
@@ -407,6 +429,16 @@ footer {
     color: #fff;
 }
 
+#contacto a[href^="mailto:"] {
+    color: #2dc881; /* Change to a color with better contrast */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contacto a[href^="mailto:"]:hover {
+    color: #ff0303; /* Change to a color with better contrast on hover */
+}
+
 .form-container {
     display: flex;
     justify-content: center;
@@ -419,5 +451,68 @@ footer {
     height: 800px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Sección de Inicio */
+#inicio {
+    position: relative;
+    padding: 60px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+#inicio::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/backcard.png') no-repeat center center/cover;
+    filter: blur(4px); /* Apply blur of 4px */
+    z-index: -1;
+}
+
+#inicio h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#inicio p {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/* Sección de Quiénes Somos */
+#nosotros {
+    position: relative;
+    padding: 60px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+#nosotros::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/backcard.png') no-repeat center center/cover;
+    filter: blur(4px); /* Apply blur of 4px */
+    transform: scaleX(-1); /* Invert the position of the image */
+    z-index: -1;
+}
+
+#nosotros h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#nosotros p {
+    font-size: 1.2rem;
+    color: #fff;
 }
 
